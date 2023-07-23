@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ETLP1"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{D875588E-73A6-4820-A218-157627F5D1C5}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{C4F1C716-A0F1-4C9A-B4F8-45AB8C25A0AA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2030,27 +2030,43 @@ where [refTable].[FullDateAlternateKey] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="163,42"
+          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Get Error Description"
+          TopLeft="692.5,288.708331899303" />
+        <NodeLayout
           Size="179.5,42"
           Id="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key"
           TopLeft="447.5625,285.097220806129" />
         <NodeLayout
+          Size="172,42"
+          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination"
+          TopLeft="692,373.208331479587" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination"
+          TopLeft="450.8125,450.124997764205" />
+        <NodeLayout
           Size="161.5,42"
           Id="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source"
           TopLeft="456.5625,202.583332327091" />
+        <NodeLayout
+          Size="159.5,42"
+          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key"
+          TopLeft="457.5625,367.611109285167" />
         <EdgeLayout
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Flat File Source Output]"
-          TopLeft="537.3125,244.583332327091">
+          Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Output 0]"
+          TopLeft="776,330.708331899303">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,40.513888479038"
+              EndConnector="0,42.499999580284"
               Start="0,0"
-              End="0,33.013888479038">
+              End="0,34.999999580284">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.013888479038" />
+                    End="0,34.999999580284" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2059,38 +2075,6 @@ where [refTable].[FullDateAlternateKey] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="159.5,42"
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key"
-          TopLeft="457.5625,367.611109285167" />
-        <EdgeLayout
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Lookup Match Output]"
-          TopLeft="537.3125,327.097220806129">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40.513888479038"
-              Start="0,0"
-              End="0,33.013888479038">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.013888479038" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,10.702256739519,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="173,42"
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination"
-          TopLeft="450.8125,450.124997764205" />
         <EdgeLayout
           Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Lookup Match Output1]"
           TopLeft="537.3125,409.611109285167">
@@ -2115,10 +2099,30 @@ where [refTable].[FullDateAlternateKey] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Get Error Description"
-          TopLeft="692.5,288.708331899303" />
+        <EdgeLayout
+          Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Lookup Match Output]"
+          TopLeft="537.3125,327.097220806129">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.513888479038"
+              Start="0,0"
+              End="0,33.013888479038">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.013888479038" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,10.702256739519,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Lookup Error Output]"
           TopLeft="627.0625,307.902776352716">
@@ -2143,24 +2147,20 @@ where [refTable].[FullDateAlternateKey] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="172,42"
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination"
-          TopLeft="692,373.208331479587" />
         <EdgeLayout
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Output 0]"
-          TopLeft="776,330.708331899303">
+          Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Flat File Source Output]"
+          TopLeft="537.3125,244.583332327091">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,42.499999580284"
+              EndConnector="0,40.513888479038"
               Start="0,0"
-              End="0,34.999999580284">
+              End="0,33.013888479038">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.999999580284" />
+                    End="0,33.013888479038" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2178,7 +2178,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2188,30 +2188,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimDate]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2228,6 +2205,29 @@ where [refTable].[FullDateAlternateKey] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
