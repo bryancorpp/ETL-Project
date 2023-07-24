@@ -11,11 +11,64 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ETLP1"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{C4F1C716-A0F1-4C9A-B4F8-45AB8C25A0AA}">
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{CEF85301-789F-4F9B-A274-20672721A20F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CSV Conditional Example]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="CSV conditional split example"
+      DTS:DTSID="{55146972-22B7-405F-BB73-B84564D12730}"
+      DTS:ObjectName="CSV Conditional Example">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\bryan\OneDrive\Desktop\CSV UPDATE_INSERT_DATA\SampleCurrencyDataCSP.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AverageRate"
+              DTS:DTSID="{B25D3C79-FF55-4B68-94D6-6BC5FFE60619}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CurrencyID"
+              DTS:DTSID="{7A6F96ED-13D1-4754-92D2-4D65CFE2A550}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CurrencyDate"
+              DTS:DTSID="{B7EBEB6B-CEA5-4213-B842-550EFFBC2EE6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EndOfDayRate"
+              DTS:DTSID="{DBDCAA3E-F21A-49A3-92B5-42690BD05CC2}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[CSV Connection]"
       DTS:CreationName="FLATFILE"
@@ -39,7 +92,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="AverageRate"
-              DTS:DTSID="{F228C158-F06D-48B3-B5BF-249AC13264A4}"
+              DTS:DTSID="{C8F157F6-EFB0-4850-A11F-C80567745F97}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +101,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CurrencyID"
-              DTS:DTSID="{4EBC9C9C-C796-41F1-924D-ABF04A7A87A1}"
+              DTS:DTSID="{FC93D374-1C78-4817-87E5-40602FCC1FFB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +110,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CurrencyDate"
-              DTS:DTSID="{3C041FB9-7640-41BE-B24E-2D9333369221}"
+              DTS:DTSID="{2C337C4D-93AF-4D82-9543-DD56E70EF391}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -65,10 +118,22 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="EndOfDayRate"
-              DTS:DTSID="{F58F2EDE-BBAD-4A6B-8449-573DDABFAAA5}"
+              DTS:DTSID="{603B3171-44FC-4D5E-9054-CA067A40703D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-NK2NKON.AdventureWorksDW20121]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FDAE9384-F523-41F6-AB79-E132FBCEBF08}"
+      DTS:ObjectName="DESKTOP-NK2NKON.AdventureWorksDW20121">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-NK2NKON;Initial Catalog=AdventureWorksDW2012;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-ETLP1-{FDAE9384-F523-41F6-AB79-E132FBCEBF08}DESKTOP-NK2NKON.AdventureWorksDW20121;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -176,7 +241,7 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{F7543C0E-05C8-41CC-8BE8-E57C6BE50162}"
+      DTS:DTSID="{44811347-96C0-4896-809A-8CC7C37BB48B}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varFileName">
@@ -190,401 +255,370 @@
     DTS:LoggingMode="2" />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Foreach File in Folder"
-      DTS:CreationName="STOCK:FOREACHLOOP"
-      DTS:Description="Foreach Loop Container"
-      DTS:DTSID="{62FCB02A-EA91-4198-ADBD-D47CDD266AFD}"
-      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:refId="Package\Extract Sample Currency Data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{9AC6C356-FBE4-4AD0-8349-9ACD7496CE92}"
+      DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Foreach File in Folder">
-      <DTS:ForEachEnumerator
-        DTS:CreationName="Microsoft.ForEachFileEnumerator"
-        DTS:DTSID="{E7E78FB1-F8CB-4739-B8B0-C5C464EEFF4F}"
-        DTS:ObjectName="{E7E78FB1-F8CB-4739-B8B0-C5C464EEFF4F}">
-        <DTS:ObjectData>
-          <ForEachFileEnumeratorProperties>
-            <FEFEProperty
-              Folder="C:\Users\bryan\OneDrive\Desktop\CSV Sample Data" />
-            <FEFEProperty
-              FileSpec="Currency_*.csv" />
-            <FEFEProperty
-              FileNameRetrievalType="0" />
-            <FEFEProperty
-              Recurse="-1" />
-          </ForEachFileEnumeratorProperties>
-        </DTS:ObjectData>
-      </DTS:ForEachEnumerator>
+      DTS:ObjectName="Extract Sample Currency Data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0"
-        DTS:LoggingMode="2" />
-      <DTS:Executables>
-        <DTS:Executable
-          DTS:refId="Package\Foreach File in Folder\Extract Sample Currency Data"
-          DTS:CreationName="Microsoft.Pipeline"
-          DTS:Description="Data Flow Task"
-          DTS:DTSID="{9AC6C356-FBE4-4AD0-8349-9ACD7496CE92}"
-          DTS:ExecutableType="Microsoft.Pipeline"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Extract Sample Currency Data"
-          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-          <DTS:Variables />
-          <DTS:LoggingOptions
-            DTS:FilterKind="0"
-            DTS:LoggingMode="1">
-            <DTS:Property
-              DTS:DataType="8"
-              DTS:Name="EventFilter">2,21,PipelineExecutionPlan,22,PipelineExecutionTrees</DTS:Property>
-            <DTS:Property
-              DTS:EventName="PipelineExecutionPlan"
-              DTS:Name="ColumnFilter">
-              <DTS:Property
-                DTS:Name="Computer">-1</DTS:Property>
-              <DTS:Property
-                DTS:Name="Operator">-1</DTS:Property>
-              <DTS:Property
-                DTS:Name="SourceName">-1</DTS:Property>
-              <DTS:Property
-                DTS:Name="SourceID">-1</DTS:Property>
-              <DTS:Property
-                DTS:Name="ExecutionID">-1</DTS:Property>
-              <DTS:Property
-                DTS:Name="MessageText">-1</DTS:Property>
-              <DTS:Property
-                DTS:Name="DataBytes">-1</DTS:Property>
-            </DTS:Property>
-            <DTS:Property
-              DTS:EventName="PipelineExecutionTrees"
-              DTS:Name="ColumnFilter">
-              <DTS:Property
-                DTS:Name="Computer">-1</DTS:Property>
-              <DTS:Property
-                DTS:Name="Operator">-1</DTS:Property>
-              <DTS:Property
-                DTS:Name="SourceName">-1</DTS:Property>
-              <DTS:Property
-                DTS:Name="SourceID">-1</DTS:Property>
-              <DTS:Property
-                DTS:Name="ExecutionID">-1</DTS:Property>
-              <DTS:Property
-                DTS:Name="MessageText">-1</DTS:Property>
-              <DTS:Property
-                DTS:Name="DataBytes">-1</DTS:Property>
-            </DTS:Property>
-            <DTS:SelectedLogProviders>
-              <DTS:SelectedLogProvider
-                DTS:InstanceID="{C3D65573-AC6A-4882-93DB-931105E8AB33}" />
-            </DTS:SelectedLogProviders>
-          </DTS:LoggingOptions>
-          <DTS:ObjectData>
-            <pipeline
+        DTS:LoggingMode="1">
+        <DTS:Property
+          DTS:DataType="8"
+          DTS:Name="EventFilter">2,21,PipelineExecutionPlan,22,PipelineExecutionTrees</DTS:Property>
+        <DTS:Property
+          DTS:EventName="PipelineExecutionPlan"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:Property
+          DTS:EventName="PipelineExecutionTrees"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:SelectedLogProviders>
+          <DTS:SelectedLogProvider
+            DTS:InstanceID="{C3D65573-AC6A-4882-93DB-931105E8AB33}" />
+        </DTS:SelectedLogProviders>
+      </DTS:LoggingOptions>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Sample Currency Data\CSV Data Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="CSV Data Source"
+              usesDispositions="true"
               version="1">
-              <components>
-                <component
-                  refId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source"
-                  componentClassID="Microsoft.FlatFileSource"
-                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-                  description="Flat File Source"
-                  localeId="1033"
-                  name="CSV Data Source"
-                  usesDispositions="true"
-                  version="1">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      description="Specifies whether zero-length columns are treated as null."
-                      name="RetainNulls">false</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                      name="FileNameColumnName"></property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Connections[FlatFileConnection]"
-                      connectionManagerID="Package.ConnectionManagers[CSV Connection]"
-                      connectionManagerRefId="Package.ConnectionManagers[CSV Connection]"
-                      name="FlatFileConnection" />
-                  </connections>
-                  <outputs>
-                    <output
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output]"
-                      name="Flat File Source Output">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[AverageRate]"
-                          dataType="r4"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[AverageRate]"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[AverageRate]"
-                          name="AverageRate"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the data is in binary format."
-                              name="UseBinaryFormat">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyID]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[CurrencyID]"
-                          length="3"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyID]"
-                          name="CurrencyID"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the data is in binary format."
-                              name="UseBinaryFormat">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyDate]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[CurrencyDate]"
-                          length="50"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyDate]"
-                          name="CurrencyDate"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the data is in binary format."
-                              name="UseBinaryFormat">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[EndOfDayRate]"
-                          dataType="r4"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[EndOfDayRate]"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[EndOfDayRate]"
-                          name="EndOfDayRate"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the data is in binary format."
-                              name="UseBinaryFormat">false</property>
-                          </properties>
-                        </outputColumn>
-                      </outputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[AverageRate]"
-                          dataType="r4"
-                          name="AverageRate" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[CurrencyID]"
-                          dataType="wstr"
-                          length="3"
-                          name="CurrencyID" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[CurrencyDate]"
-                          dataType="wstr"
-                          length="50"
-                          name="CurrencyDate" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[EndOfDayRate]"
-                          dataType="r4"
-                          name="EndOfDayRate" />
-                      </externalMetadataColumns>
-                    </output>
-                    <output
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Error Output]"
-                      isErrorOut="true"
-                      name="Flat File Source Error Output">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                          codePage="1252"
-                          dataType="text"
-                          description="Flat File Source Error Output Column"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                          name="Flat File Source Error Output Column" />
-                        <outputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
-                  refId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination"
-                  componentClassID="Microsoft.FlatFileDestination"
-                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-                  description="Flat File Destination"
-                  localeId="1033"
-                  name="Flat File Destination">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      description="Specifies whether the data will overwrite or append to the destination file."
-                      name="Overwrite">false</property>
-                    <property
-                      dataType="System.Null"
-                      description="Specifies the text to write to the destination file before any data is written."
-                      expressionType="Notify"
-                      name="Header" />
-                    <property
-                      dataType="System.Boolean"
-                      description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                      name="EscapeQualifier">false</property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Connections[FlatFileConnection]"
-                      connectionManagerID="Package.ConnectionManagers[Error Data]"
-                      connectionManagerRefId="Package.ConnectionManagers[Error Data]"
-                      name="FlatFileConnection" />
-                  </connections>
-                  <inputs>
-                    <input
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input]"
-                      hasSideEffects="true"
-                      name="Flat File Destination Input">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[AverageRate]"
-                          cachedDataType="r4"
-                          cachedName="AverageRate"
-                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AverageRate]"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[AverageRate]" />
-                        <inputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[CurrencyID]"
-                          cachedDataType="wstr"
-                          cachedLength="3"
-                          cachedName="CurrencyID"
-                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CurrencyID]"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyID]" />
-                        <inputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[CurrencyDate]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
-                          cachedName="CurrencyDate"
-                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CurrencyDate]"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyDate]" />
-                        <inputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[EndOfDayRate]"
-                          cachedDataType="r4"
-                          cachedName="EndOfDayRate"
-                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndOfDayRate]"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[EndOfDayRate]" />
-                        <inputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorCode]"
-                          cachedDataType="i4"
-                          cachedName="ErrorCode"
-                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output].Columns[ErrorCode]" />
-                        <inputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
-                          cachedDataType="i4"
-                          cachedName="ErrorColumn"
-                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output].Columns[ErrorColumn]" />
-                        <inputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorDescription]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
-                          cachedName="ErrorDescription"
-                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorDescription]"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Get Error Description.Outputs[Output 0].Columns[ErrorDescription]" />
-                      </inputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AverageRate]"
-                          dataType="r4"
-                          name="AverageRate" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CurrencyID]"
-                          dataType="wstr"
-                          length="3"
-                          name="CurrencyID" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CurrencyDate]"
-                          dataType="wstr"
-                          length="50"
-                          name="CurrencyDate" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndOfDayRate]"
-                          dataType="r4"
-                          name="EndOfDayRate" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
-                          dataType="i4"
-                          name="ErrorCode" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
-                          dataType="i4"
-                          name="ErrorColumn" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorDescription]"
-                          dataType="wstr"
-                          length="50"
-                          name="ErrorDescription" />
-                      </externalMetadataColumns>
-                    </input>
-                  </inputs>
-                </component>
-                <component
-                  refId="Package\Foreach File in Folder\Extract Sample Currency Data\Get Error Description"
-                  componentClassID="Microsoft.ManagedComponentHost"
-                  contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;11"
-                  description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
-                  name="Get Error Description"
-                  version="11">
-                  <properties>
-                    <property
-                      dataType="System.String"
-                      description="Stores the source code of the component"
-                      isArray="true"
-                      name="SourceCode"
-                      state="cdata">
-                      <arrayElements
-                        arrayElementCount="30">
-                        <arrayElement
-                          dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Sample Currency Data\CSV Data Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[CSV Conditional Example]"
+                  connectionManagerRefId="Package.ConnectionManagers[CSV Conditional Example]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[AverageRate]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[AverageRate]"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[AverageRate]"
+                      name="AverageRate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[CurrencyID]"
+                      length="3"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyID]"
+                      name="CurrencyID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyDate]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[CurrencyDate]"
+                      length="50"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyDate]"
+                      name="CurrencyDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[EndOfDayRate]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[EndOfDayRate]"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[EndOfDayRate]"
+                      name="EndOfDayRate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[AverageRate]"
+                      dataType="r4"
+                      name="AverageRate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[CurrencyID]"
+                      dataType="wstr"
+                      length="3"
+                      name="CurrencyID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[CurrencyDate]"
+                      dataType="dbDate"
+                      name="CurrencyDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[EndOfDayRate]"
+                      dataType="r4"
+                      name="EndOfDayRate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Sample Currency Data\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Flat File Destination">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">false</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Sample Currency Data\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Error Data]"
+                  connectionManagerRefId="Package.ConnectionManagers[Error Data]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[AverageRate]"
+                      cachedDataType="r4"
+                      cachedName="AverageRate"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AverageRate]"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[AverageRate]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[CurrencyID]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="CurrencyID"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CurrencyID]"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyID]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[CurrencyDate]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CurrencyDate"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CurrencyDate]"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyDate]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[EndOfDayRate]"
+                      cachedDataType="r4"
+                      cachedName="EndOfDayRate"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndOfDayRate]"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[EndOfDayRate]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output].Columns[ErrorColumn]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ErrorDescription"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorDescription]"
+                      lineageId="Package\Extract Sample Currency Data\Get Error Description.Outputs[Output 0].Columns[ErrorDescription]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AverageRate]"
+                      dataType="r4"
+                      name="AverageRate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CurrencyID]"
+                      dataType="wstr"
+                      length="3"
+                      name="CurrencyID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CurrencyDate]"
+                      dataType="wstr"
+                      length="50"
+                      name="CurrencyDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndOfDayRate]"
+                      dataType="r4"
+                      name="EndOfDayRate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorDescription]"
+                      dataType="wstr"
+                      length="50"
+                      name="ErrorDescription" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Extract Sample Currency Data\Get Error Description"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;11"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Get Error Description"
+              version="11">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
 *  Microsoft SQL Server Integration Services component wrapper
 *  This module defines the base class for your component
 *  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
@@ -651,12 +685,12 @@ public class Variables
 
 }
 ]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -773,12 +807,12 @@ public class Variables
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[main.cs]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
 /* The Script Component allows you to perform virtually any operation that can be accomplished in
  * a .Net application within the context of an Integration Services data flow.
  *
@@ -901,12 +935,12 @@ public class ScriptMain : UserComponent
 
 }
 ]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
 *  Microsoft SQL Server Integration Services buffer wrappers
 *  This module defines classes for accessing data flow buffers
 *  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
@@ -975,12 +1009,12 @@ public class Input0Buffer: ScriptBuffer
 
 }
 ]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
 // <auto-generated>
 //     This code was generated by a tool.
 //
@@ -1008,12 +1042,12 @@ namespace SC_f982aec998034c0383e7105dfc2cb5a4.Properties {
     }
 }
 ]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[SC_f982aec998034c0383e7105dfc2cb5a4.csproj]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_f982aec998034c0383e7105dfc2cb5a4.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -1100,12 +1134,12 @@ namespace SC_f982aec998034c0383e7105dfc2cb5a4.Properties {
     </VisualStudio>
   </ProjectExtensions>
 </Project>]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[Project]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
 <c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
   <msb:PropertyGroup>
     <msb:CodeName>SC_f982aec998034c0383e7105dfc2cb5a4</msb:CodeName>
@@ -1125,12 +1159,12 @@ namespace SC_f982aec998034c0383e7105dfc2cb5a4.Properties {
     <msb:File Include="Properties\Settings.Designer.cs" />
   </msb:ItemGroup>
 </c:Project>]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[using System.Reflection;
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
 
 //
@@ -1159,24 +1193,24 @@ using System.Runtime.CompilerServices;
 
 [assembly: AssemblyVersion("1.0.0.0")]
 ]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
 <SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
   <Profiles>
     <Profile Name="(Default)" />
   </Profiles>
   <Settings />
 </SettingsFile>]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
 // <auto-generated>
 //     This code was generated by a tool.
 //
@@ -1243,20 +1277,20 @@ namespace SC_f982aec998034c0383e7105dfc2cb5a4.Properties {
     }
 }
 ]]></arrayElement>
-                      </arrayElements>
-                    </property>
-                    <property
-                      dataType="System.String"
-                      description="Stores the binary representation of the component"
-                      isArray="true"
-                      name="BinaryCode"
-                      state="cdata">
-                      <arrayElements
-                        arrayElementCount="2">
-                        <arrayElement
-                          dataType="System.String"><![CDATA[SC_f982aec998034c0383e7105dfc2cb5a4.dll]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_f982aec998034c0383e7105dfc2cb5a4.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
 ZGUuDQ0KJAAAAAAAAABQRQAATAEDAHYCvGQAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAAijIA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
@@ -1391,603 +1425,624 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
-                      </arrayElements>
-                    </property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
-                      name="VSTAProjectName"
-                      typeConverter="NOTBROWSABLE">SC_f982aec998034c0383e7105dfc2cb5a4</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the programming language used by the script."
-                      name="ScriptLanguage"
-                      typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies a comma-separated list of read-only variables."
-                      name="ReadOnlyVariables"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies a comma-separated list of read/write variables."
-                      name="ReadWriteVariables"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
-                    <property
-                      dataType="System.String"
-                      description="List of breakpoints present on the script."
-                      isArray="true"
-                      name="BreakpointCollection"
-                      typeConverter="NOTBROWSABLE">
-                      <arrayElements
-                        arrayElementCount="0" />
-                    </property>
-                    <property
-                      dataType="System.String"
-                      description="Checksum to match component metedata against compiled codes."
-                      name="MetadataChecksum140"
-                      typeConverter="NOTBROWSABLE">06</property>
-                    <property
-                      dataType="System.String"
-                      name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
-                  </properties>
-                  <inputs>
-                    <input
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\Get Error Description.Inputs[Input 0]"
-                      hasSideEffects="true"
-                      name="Input 0">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Get Error Description.Inputs[Input 0].Columns[ErrorCode]"
-                          cachedDataType="i4"
-                          cachedName="ErrorCode"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output].Columns[ErrorCode]" />
-                      </inputColumns>
-                      <externalMetadataColumns />
-                    </input>
-                  </inputs>
-                  <outputs>
-                    <output
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\Get Error Description.Outputs[Output 0]"
-                      name="Output 0"
-                      synchronousInputId="Package\Foreach File in Folder\Extract Sample Currency Data\Get Error Description.Inputs[Input 0]">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Get Error Description.Outputs[Output 0].Columns[ErrorDescription]"
-                          dataType="wstr"
-                          length="50"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Get Error Description.Outputs[Output 0].Columns[ErrorDescription]"
-                          name="ErrorDescription" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
-                  refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key"
-                  componentClassID="Microsoft.Lookup"
-                  contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-                  description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-                  name="Lookup Currency Key"
-                  usesDispositions="true"
-                  version="6">
-                  <properties>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the SQL statement that generates the lookup table."
-                      expressionType="Notify"
-                      name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT * FROM [dbo].[DimCurrency]
-WHERE [CurrencyAlternateKey]
-IN ('ARS', 'AUD', 'BRL', 'CAD', 'CNY',
-    'DEM', 'EUR', 'FRF', 'GBP', 'JPY',
-    'MXN', 'SAR', 'USD', 'VEB')</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
-                      expressionType="Notify"
-                      name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT * FROM [dbo].[DimCurrency]
-WHERE [CurrencyAlternateKey]
-IN ('ARS', 'AUD', 'BRL', 'CAD', 'CNY',
-    'DEM', 'EUR', 'FRF', 'GBP', 'JPY',
-    'MXN', 'SAR', 'USD', 'VEB')) [refTable]
-where [refTable].[CurrencyAlternateKey] = ?</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the type of connection used to access the reference dataset."
-                      name="ConnectionType"
-                      typeConverter="LookupConnectionType">0</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the cache type of the lookup table."
-                      name="CacheType"
-                      typeConverter="CacheType">0</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                      name="NoMatchBehavior"
-                      typeConverter="LookupNoMatchBehavior">0</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
-                      name="NoMatchCachePercentage">0</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
-                      name="MaxMemoryUsage">25</property>
-                    <property
-                      dataType="System.Int64"
-                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
-                      name="MaxMemoryUsage64">25</property>
-                    <property
-                      dataType="System.String"
-                      description="Indicates whether to reference metadata in an XML format."
-                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CurrencyKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CurrencyAlternateKey" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CurrencyName" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                      name="ParameterMap">#{Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyID]};</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the column code page to use when code page information is unavailable from the data source."
-                      name="DefaultCodePage">1252</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
-                      name="TreatDuplicateKeysAsError">false</property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Connections[OleDbConnection]"
-                      connectionManagerID="{B80F4FFC-0ED2-4B76-BEFF-B4943C7FE77D}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-NK2NKON.AdventureWorksDW20121]"
-                      description="Connection manager used to access lookup data."
-                      name="OleDbConnection" />
-                  </connections>
-                  <inputs>
-                    <input
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Inputs[Lookup Input]"
-                      name="Lookup Input">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Inputs[Lookup Input].Columns[CurrencyID]"
-                          cachedDataType="wstr"
-                          cachedLength="3"
-                          cachedName="CurrencyID"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyID]">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="Specifies the column in the reference table that a column joins."
-                              name="JoinToReferenceColumn">CurrencyAlternateKey</property>
-                            <property
-                              dataType="System.Null"
-                              description="Specifies the column in the reference table from which a column is copied."
-                              name="CopyFromReferenceColumn" />
-                          </properties>
-                        </inputColumn>
-                      </inputColumns>
-                      <externalMetadataColumns />
-                    </input>
-                  </inputs>
-                  <outputs>
-                    <output
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Match Output]"
-                      errorOrTruncationOperation="Lookup"
-                      errorRowDisposition="RedirectRow"
-                      exclusionGroup="1"
-                      name="Lookup Match Output"
-                      synchronousInputId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Inputs[Lookup Input]">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Match Output].Columns[CurrencyKey]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Copy Column"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Match Output].Columns[CurrencyKey]"
-                          name="CurrencyKey"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="Specifies the column in the reference table from which a column is copied."
-                              name="CopyFromReferenceColumn">CurrencyKey</property>
-                          </properties>
-                        </outputColumn>
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                    <output
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup No Match Output]"
-                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
-                      exclusionGroup="1"
-                      name="Lookup No Match Output"
-                      synchronousInputId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Inputs[Lookup Input]">
-                      <externalMetadataColumns />
-                    </output>
-                    <output
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output]"
-                      exclusionGroup="1"
-                      isErrorOut="true"
-                      name="Lookup Error Output"
-                      synchronousInputId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Inputs[Lookup Input]">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
-                  refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key"
-                  componentClassID="Microsoft.Lookup"
-                  contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-                  description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-                  name="Lookup Date Key"
-                  usesDispositions="true"
-                  version="6">
-                  <properties>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the SQL statement that generates the lookup table."
-                      expressionType="Notify"
-                      name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[DimDate]</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
-                      expressionType="Notify"
-                      name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[DimDate]) [refTable]
-where [refTable].[FullDateAlternateKey] = ?</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the type of connection used to access the reference dataset."
-                      name="ConnectionType"
-                      typeConverter="LookupConnectionType">0</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the cache type of the lookup table."
-                      name="CacheType"
-                      typeConverter="CacheType">1</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                      name="NoMatchBehavior"
-                      typeConverter="LookupNoMatchBehavior">0</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
-                      name="NoMatchCachePercentage">0</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
-                      name="MaxMemoryUsage">25</property>
-                    <property
-                      dataType="System.Int64"
-                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
-                      name="MaxMemoryUsage64">25</property>
-                    <property
-                      dataType="System.String"
-                      description="Indicates whether to reference metadata in an XML format."
-                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DateKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FullDateAlternateKey" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayNumberOfWeek" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EnglishDayNameOfWeek" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SpanishDayNameOfWeek" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FrenchDayNameOfWeek" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayNumberOfMonth" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayNumberOfYear" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeekNumberOfYear" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EnglishMonthName" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SpanishMonthName" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FrenchMonthName" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MonthNumberOfYear" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CalendarQuarter" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CalendarYear" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CalendarSemester" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FiscalQuarter" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FiscalYear" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FiscalSemester" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                      name="ParameterMap">#{Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyDate]};</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the column code page to use when code page information is unavailable from the data source."
-                      name="DefaultCodePage">1252</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
-                      name="TreatDuplicateKeysAsError">false</property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Connections[OleDbConnection]"
-                      connectionManagerID="{B80F4FFC-0ED2-4B76-BEFF-B4943C7FE77D}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-NK2NKON.AdventureWorksDW20121]"
-                      description="Connection manager used to access lookup data."
-                      name="OleDbConnection" />
-                  </connections>
-                  <inputs>
-                    <input
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Inputs[Lookup Input]"
-                      name="Lookup Input">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Inputs[Lookup Input].Columns[CurrencyDate]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
-                          cachedName="CurrencyDate"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyDate]">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="Specifies the column in the reference table that a column joins."
-                              name="JoinToReferenceColumn">FullDateAlternateKey</property>
-                            <property
-                              dataType="System.Null"
-                              description="Specifies the column in the reference table from which a column is copied."
-                              name="CopyFromReferenceColumn" />
-                          </properties>
-                        </inputColumn>
-                      </inputColumns>
-                      <externalMetadataColumns />
-                    </input>
-                  </inputs>
-                  <outputs>
-                    <output
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Match Output]"
-                      errorOrTruncationOperation="Lookup"
-                      errorRowDisposition="FailComponent"
-                      exclusionGroup="1"
-                      name="Lookup Match Output"
-                      synchronousInputId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Inputs[Lookup Input]">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Match Output].Columns[DateKey]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Copy Column"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Match Output].Columns[DateKey]"
-                          name="DateKey"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="Specifies the column in the reference table from which a column is copied."
-                              name="CopyFromReferenceColumn">DateKey</property>
-                          </properties>
-                        </outputColumn>
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                    <output
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup No Match Output]"
-                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
-                      exclusionGroup="1"
-                      name="Lookup No Match Output"
-                      synchronousInputId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Inputs[Lookup Input]">
-                      <externalMetadataColumns />
-                    </output>
-                    <output
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Error Output]"
-                      exclusionGroup="1"
-                      isErrorOut="true"
-                      name="Lookup Error Output"
-                      synchronousInputId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Inputs[Lookup Input]">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
-                  refId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination"
-                  componentClassID="Microsoft.OLEDBDestination"
-                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-                  description="OLE DB Destination"
-                  name="OLE DB Destination"
-                  usesDispositions="true"
-                  version="4">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                      name="CommandTimeout">0</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[CSVSampleData]</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
-                    <property
-                      dataType="System.String"
-                      description="The SQL command to be executed."
-                      name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the column code page to use when code page information is unavailable from the data source."
-                      name="DefaultCodePage">1252</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Forces the use of the DefaultCodePage property value when describing character data."
-                      name="AlwaysUseDefaultCodePage">false</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the mode used to access the database."
-                      name="AccessMode"
-                      typeConverter="AccessMode">3</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepIdentity">false</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepNulls">false</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                      name="FastLoadMaxInsertCommitSize">2147483647</property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{B80F4FFC-0ED2-4B76-BEFF-B4943C7FE77D}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-NK2NKON.AdventureWorksDW20121]"
-                      description="The OLE DB runtime connection used to access the database."
-                      name="OleDbConnection" />
-                  </connections>
-                  <inputs>
-                    <input
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                      errorOrTruncationOperation="Insert"
-                      errorRowDisposition="FailComponent"
-                      hasSideEffects="true"
-                      name="OLE DB Destination Input">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AverageRate]"
-                          cachedDataType="r4"
-                          cachedName="AverageRate"
-                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AverageRate]"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[AverageRate]" />
-                        <inputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CurrencyID]"
-                          cachedDataType="wstr"
-                          cachedLength="3"
-                          cachedName="CurrencyID"
-                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyID]"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyID]" />
-                        <inputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CurrencyDate]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
-                          cachedName="CurrencyDate"
-                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyDate]"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyDate]" />
-                        <inputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EndOfDayRate]"
-                          cachedDataType="r4"
-                          cachedName="EndOfDayRate"
-                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndOfDayRate]"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[EndOfDayRate]" />
-                        <inputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CurrencyKey]"
-                          cachedDataType="i4"
-                          cachedName="CurrencyKey"
-                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyKey]"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Match Output].Columns[CurrencyKey]" />
-                        <inputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DateKey]"
-                          cachedDataType="i4"
-                          cachedName="DateKey"
-                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Match Output].Columns[DateKey]" />
-                      </inputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AverageRate]"
-                          dataType="r4"
-                          name="AverageRate" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyID]"
-                          dataType="wstr"
-                          length="3"
-                          name="CurrencyID" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyDate]"
-                          dataType="wstr"
-                          length="50"
-                          name="CurrencyDate" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndOfDayRate]"
-                          dataType="r4"
-                          name="EndOfDayRate" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyKey]"
-                          dataType="i4"
-                          name="CurrencyKey" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
-                          dataType="i4"
-                          name="DateKey" />
-                      </externalMetadataColumns>
-                    </input>
-                  </inputs>
-                  <outputs>
-                    <output
-                      refId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
-                      exclusionGroup="1"
-                      isErrorOut="true"
-                      name="OLE DB Destination Error Output"
-                      synchronousInputId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input]">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-              </components>
-              <paths>
-                <path
-                  refId="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Flat File Source Output]"
-                  endId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Inputs[Lookup Input]"
-                  name="Flat File Source Output"
-                  startId="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output]" />
-                <path
-                  refId="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Lookup Error Output]"
-                  endId="Package\Foreach File in Folder\Extract Sample Currency Data\Get Error Description.Inputs[Input 0]"
-                  name="Lookup Error Output"
-                  startId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output]" />
-                <path
-                  refId="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Lookup Match Output]"
-                  endId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Inputs[Lookup Input]"
-                  name="Lookup Match Output"
-                  startId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Match Output]" />
-                <path
-                  refId="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Lookup Match Output1]"
-                  endId="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                  name="Lookup Match Output"
-                  startId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Match Output]" />
-                <path
-                  refId="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Output 0]"
-                  endId="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input]"
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_f982aec998034c0383e7105dfc2cb5a4</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum140"
+                  typeConverter="NOTBROWSABLE">06</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Extract Sample Currency Data\Get Error Description.Inputs[Input 0]"
+                  hasSideEffects="true"
+                  name="Input 0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Get Error Description.Inputs[Input 0].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      lineageId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output].Columns[ErrorCode]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Sample Currency Data\Get Error Description.Outputs[Output 0]"
                   name="Output 0"
-                  startId="Package\Foreach File in Folder\Extract Sample Currency Data\Get Error Description.Outputs[Output 0]" />
-              </paths>
-            </pipeline>
-          </DTS:ObjectData>
-        </DTS:Executable>
-      </DTS:Executables>
+                  synchronousInputId="Package\Extract Sample Currency Data\Get Error Description.Inputs[Input 0]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Get Error Description.Outputs[Output 0].Columns[ErrorDescription]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract Sample Currency Data\Get Error Description.Outputs[Output 0].Columns[ErrorDescription]"
+                      name="ErrorDescription" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Sample Currency Data\Lookup Currency Key"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup Currency Key"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[DimCurrency]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[DimCurrency]) [refTable]
+where [refTable].[CurrencyAlternateKey] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CurrencyKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CurrencyAlternateKey" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CurrencyName" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Sample Currency Data\Lookup Currency Key.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-NK2NKON.AdventureWorksDW20121]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-NK2NKON.AdventureWorksDW20121]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Sample Currency Data\Lookup Currency Key.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Lookup Currency Key.Inputs[Lookup Input].Columns[CurrencyID]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="CurrencyID"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CurrencyAlternateKey</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="RedirectRow"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Extract Sample Currency Data\Lookup Currency Key.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Match Output].Columns[CurrencyKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Match Output].Columns[CurrencyKey]"
+                      name="CurrencyKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CurrencyKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Extract Sample Currency Data\Lookup Currency Key.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Extract Sample Currency Data\Lookup Currency Key.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Sample Currency Data\Lookup Date Key"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup Date Key"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[DimDate]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[DimDate]) [refTable]
+where [refTable].[FullDateAlternateKey] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DateKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FullDateAlternateKey" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayNumberOfWeek" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EnglishDayNameOfWeek" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SpanishDayNameOfWeek" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FrenchDayNameOfWeek" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayNumberOfMonth" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayNumberOfYear" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeekNumberOfYear" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EnglishMonthName" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SpanishMonthName" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FrenchMonthName" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MonthNumberOfYear" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CalendarQuarter" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CalendarYear" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CalendarSemester" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FiscalQuarter" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FiscalYear" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FiscalSemester" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyDate]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Sample Currency Data\Lookup Date Key.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-NK2NKON.AdventureWorksDW20121]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-NK2NKON.AdventureWorksDW20121]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Sample Currency Data\Lookup Date Key.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Lookup Date Key.Inputs[Lookup Input].Columns[CurrencyDate]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CurrencyDate"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyDate]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">FullDateAlternateKey</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Extract Sample Currency Data\Lookup Date Key.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Match Output].Columns[DateKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Match Output].Columns[DateKey]"
+                      name="DateKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DateKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Extract Sample Currency Data\Lookup Date Key.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Extract Sample Currency Data\Lookup Date Key.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Sample Currency Data\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[CSVSample]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Sample Currency Data\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-NK2NKON.AdventureWorksDW20121]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-NK2NKON.AdventureWorksDW20121]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AverageRate]"
+                      cachedDataType="r4"
+                      cachedName="AverageRate"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AverageRate]"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[AverageRate]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CurrencyID]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="CurrencyID"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyID]"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyID]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CurrencyDate]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CurrencyDate"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyDate]"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyDate]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EndOfDayRate]"
+                      cachedDataType="r4"
+                      cachedName="EndOfDayRate"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndOfDayRate]"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[EndOfDayRate]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CurrencyKey]"
+                      cachedDataType="i4"
+                      cachedName="CurrencyKey"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyKey]"
+                      lineageId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Match Output].Columns[CurrencyKey]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      lineageId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Match Output].Columns[DateKey]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AverageRate]"
+                      dataType="r4"
+                      name="AverageRate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyID]"
+                      dataType="wstr"
+                      length="3"
+                      name="CurrencyID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyDate]"
+                      dataType="wstr"
+                      length="50"
+                      name="CurrencyDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndOfDayRate]"
+                      dataType="r4"
+                      name="EndOfDayRate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyKey]"
+                      dataType="i4"
+                      name="CurrencyKey" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Sample Currency Data\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Sample Currency Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Sample Currency Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Sample Currency Data.Paths[Flat File Source Output]"
+              endId="Package\Extract Sample Currency Data\Lookup Currency Key.Inputs[Lookup Input]"
+              name="Flat File Source Output"
+              startId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Extract Sample Currency Data.Paths[Lookup Error Output]"
+              endId="Package\Extract Sample Currency Data\Get Error Description.Inputs[Input 0]"
+              name="Lookup Error Output"
+              startId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output]" />
+            <path
+              refId="Package\Extract Sample Currency Data.Paths[Lookup Match Output]"
+              endId="Package\Extract Sample Currency Data\Lookup Date Key.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Extract Sample Currency Data.Paths[Lookup Match Output1]"
+              endId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Extract Sample Currency Data.Paths[Output 0]"
+              endId="Package\Extract Sample Currency Data\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Output 0"
+              startId="Package\Extract Sample Currency Data\Get Error Description.Outputs[Output 0]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Foreach File in Folder"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{62FCB02A-EA91-4198-ADBD-D47CDD266AFD}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach File in Folder">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{E7E78FB1-F8CB-4739-B8B0-C5C464EEFF4F}"
+        DTS:ObjectName="{E7E78FB1-F8CB-4739-B8B0-C5C464EEFF4F}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Users\bryan\OneDrive\Desktop\CSV Sample Data" />
+            <FEFEProperty
+              FileSpec="Currency_*.csv" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="-1" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0"
+        DTS:LoggingMode="2" />
+      <DTS:Executables />
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
@@ -2010,51 +2065,51 @@ where [refTable].[FullDateAlternateKey] = ?</property>
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="220.5,42"
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data"
-          TopLeft="5.5,5.5" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="231.5,102.5"
           Size="231.5,145.5"
           Id="Package\Foreach File in Folder"
-          TopLeft="420,320.124998409922" />
+          TopLeft="130.5,312.541665114256" />
+        <NodeLayout
+          Size="220.5,42"
+          Id="Package\Extract Sample Currency Data"
+          TopLeft="391.5,340.958333432881" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Foreach File in Folder\Extract Sample Currency Data">
+    design-time-name="Package\Extract Sample Currency Data">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="163,42"
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Get Error Description"
+          Id="Package\Extract Sample Currency Data\Get Error Description"
           TopLeft="692.5,288.708331899303" />
         <NodeLayout
           Size="179.5,42"
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key"
+          Id="Package\Extract Sample Currency Data\Lookup Currency Key"
           TopLeft="447.5625,285.097220806129" />
         <NodeLayout
           Size="172,42"
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Flat File Destination"
+          Id="Package\Extract Sample Currency Data\Flat File Destination"
           TopLeft="692,373.208331479587" />
         <NodeLayout
           Size="173,42"
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination"
+          Id="Package\Extract Sample Currency Data\OLE DB Destination"
           TopLeft="450.8125,450.124997764205" />
         <NodeLayout
           Size="161.5,42"
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data\CSV Data Source"
+          Id="Package\Extract Sample Currency Data\CSV Data Source"
           TopLeft="456.5625,202.583332327091" />
         <NodeLayout
           Size="159.5,42"
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key"
+          Id="Package\Extract Sample Currency Data\Lookup Date Key"
           TopLeft="457.5625,367.611109285167" />
         <EdgeLayout
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Output 0]"
+          Id="Package\Extract Sample Currency Data.Paths[Output 0]"
           TopLeft="776,330.708331899303">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2076,31 +2131,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Lookup Match Output1]"
-          TopLeft="537.3125,409.611109285167">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40.513888479038"
-              Start="0,0"
-              End="0,33.013888479038">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.013888479038" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,10.702256739519,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Lookup Match Output]"
+          Id="Package\Extract Sample Currency Data.Paths[Lookup Match Output]"
           TopLeft="537.3125,327.097220806129">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2124,7 +2155,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Lookup Error Output]"
+          Id="Package\Extract Sample Currency Data.Paths[Lookup Error Output]"
           TopLeft="627.0625,307.902776352716">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2148,7 +2179,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Flat File Source Output]"
+          Id="Package\Extract Sample Currency Data.Paths[Flat File Source Output]"
           TopLeft="537.3125,244.583332327091">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2169,26 +2200,50 @@ where [refTable].[FullDateAlternateKey] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract Sample Currency Data.Paths[Lookup Match Output1]"
+          TopLeft="537.3125,409.611109285167">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.513888479038"
+              Start="0,0"
+              End="0,33.013888479038">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.013888479038" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,10.702256739519,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key">
+    design-time-name="Package\Extract Sample Currency Data\Lookup Currency Key">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string"></Value>
+          type="q3:string">[dbo].[DimCurrency]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2196,7 +2251,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File in Folder\Extract Sample Currency Data\OLE DB Destination">
+    design-time-name="Package\Extract Sample Currency Data\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2209,12 +2264,12 @@ where [refTable].[FullDateAlternateKey] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key">
+    design-time-name="Package\Extract Sample Currency Data\Lookup Date Key">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2224,7 +2279,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
