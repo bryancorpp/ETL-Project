@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ETLP1"
   DTS:PackageType="5"
-  DTS:VersionBuild="23"
-  DTS:VersionGUID="{CEF85301-789F-4F9B-A274-20672721A20F}">
+  DTS:VersionBuild="102"
+  DTS:VersionGUID="{67D203C6-7538-49BD-83FB-54F1340A2030}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\bryan\OneDrive\Desktop\CSV UPDATE_INSERT_DATA\SampleCurrencyDataCSP.csv">
+          DTS:ConnectionString="C:\Users\bryan\Desktop\CSV UPDATE_INSERT_DATA\SampleCurrencyDataCSP.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -38,7 +38,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="AverageRate"
-              DTS:DTSID="{B25D3C79-FF55-4B68-94D6-6BC5FFE60619}"
+              DTS:DTSID="{B4A78F0B-561F-41CE-A845-6CA073541B95}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -47,7 +47,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CurrencyID"
-              DTS:DTSID="{7A6F96ED-13D1-4754-92D2-4D65CFE2A550}"
+              DTS:DTSID="{59BA2084-50FB-4DDB-B4AC-3FA400F311BA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -55,7 +55,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="CurrencyDate"
-              DTS:DTSID="{B7EBEB6B-CEA5-4213-B842-550EFFBC2EE6}"
+              DTS:DTSID="{A94E4A0A-C841-410A-A970-6420A930C99A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -63,20 +63,17 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="EndOfDayRate"
-              DTS:DTSID="{DBDCAA3E-F21A-49A3-92B5-42690BD05CC2}"
+              DTS:DTSID="{19C83E92-7DBE-4BF9-AFA2-79FABFB71EE4}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[CSV Connection]"
+      DTS:refId="Package.ConnectionManagers[CSV Daily]"
       DTS:CreationName="FLATFILE"
-      DTS:Description="CSV file directory"
-      DTS:DTSID="{A7B35EA1-A672-47CE-A850-C9F0F4390B1D}"
-      DTS:ObjectName="CSV Connection">
-      <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[User::varFileName]</DTS:PropertyExpression>
+      DTS:DTSID="{42C3357F-1320-4DFE-A67F-81BE93962D83}"
+      DTS:ObjectName="CSV Daily">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -84,7 +81,8 @@
           DTS:HeaderRowDelimiter="_x000D__x000A_"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252">
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\bryan\Desktop\CSV UPDATE_INSERT_DATA\SampleCurrencyDataCSP.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -92,7 +90,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="AverageRate"
-              DTS:DTSID="{C8F157F6-EFB0-4850-A11F-C80567745F97}"
+              DTS:DTSID="{0666298D-3981-41FB-9A4F-74F0E2B5036C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -101,7 +99,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CurrencyID"
-              DTS:DTSID="{FC93D374-1C78-4817-87E5-40602FCC1FFB}"
+              DTS:DTSID="{D9E1DC74-792A-4EF9-8517-81E26CFBE3F5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -110,7 +108,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CurrencyDate"
-              DTS:DTSID="{2C337C4D-93AF-4D82-9543-DD56E70EF391}"
+              DTS:DTSID="{BFC8F479-592F-4F4F-B94C-6FC0471956DE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -118,7 +116,60 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="EndOfDayRate"
-              DTS:DTSID="{603B3171-44FC-4D5E-9054-CA067A40703D}"
+              DTS:DTSID="{8BAFCB2A-130B-4357-AC61-FE39F08EBE5C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CSV Update]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{ACEE757B-E1E7-48E1-943F-DFC9186B0507}"
+      DTS:ObjectName="CSV Update">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\bryan\Desktop\CSV UPDATE_INSERT_DATA\SampleCurrencyDataCSP.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AverageRate"
+              DTS:DTSID="{58C37091-BD08-4ECB-B5AB-54E6CFBBC520}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CurrencyID"
+              DTS:DTSID="{A32527EA-F578-44A8-81D0-8A083EFF4DFB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CurrencyDate"
+              DTS:DTSID="{1B36CCB9-E9F2-41DA-B4E2-1B35DCBF62F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EndOfDayRate"
+              DTS:DTSID="{EA68D61F-C6F4-4BA8-B2BC-23F91AABB255}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -133,7 +184,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-NK2NKON;Initial Catalog=AdventureWorksDW2012;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-ETLP1-{FDAE9384-F523-41F6-AB79-E132FBCEBF08}DESKTOP-NK2NKON.AdventureWorksDW20121;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-NK2NKON;Initial Catalog=AdventureWorksDW2012;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-ETLP1-{FDAE9384-F523-41F6-AB79-E132FBCEBF08}DESKTOP-NK2NKON.AdventureWorksDW20121;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -238,13 +289,35 @@
       </DTS:ObjectData>
     </DTS:LogProvider>
   </DTS:LogProviders>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{3796FF9F-0A73-469D-B4E3-9B02BDA1CCC5}"
+      DTS:ObjectName="varFileName">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{44811347-96C0-4896-809A-8CC7C37BB48B}"
+      DTS:DTSID="{A5F3C87F-7C63-4F49-8926-2047FF0F6B04}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varFileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{0D29DCDE-16AE-4E01-A0D4-AB2FAAC56883}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varFolderName">
       <DTS:VariableValue
         DTS:DataType="8"
         xml:space="preserve"></DTS:VariableValue>
@@ -254,6 +327,1193 @@
     DTS:FilterKind="0"
     DTS:LoggingMode="2" />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\CSV File Locations"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{920BACD9-6D47-41B0-AEB7-BC382AE26474}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="CSV File Locations">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{D6123D14-7153-4D3B-9628-E642DA96D6B8}"
+        DTS:ObjectName="{D6123D14-7153-4D3B-9628-E642DA96D6B8}">
+        <DTS:PropertyExpression
+          DTS:Name="Description">@[$Package::varFileName]</DTS:PropertyExpression>
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Users\bryan\Desktop\CSV UPDATE_INSERT_DATA" />
+            <FEFEProperty
+              FileSpec="SampleCurrencyDataCSP*.csv" />
+            <FEFEProperty
+              FileNameRetrievalType="1" />
+            <FEFEProperty
+              Recurse="-1" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\CSV File Locations\Data Manipulation"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{BA59A21C-7C4A-4921-A864-CA6B1EB76973}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Manipulation"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\CSV File Locations\Data Manipulation\CSV Data Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="CSV Data Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[CSV Daily]"
+                      connectionManagerRefId="Package.ConnectionManagers[CSV Daily]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].Columns[AverageRate]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[AverageRate]"
+                          lineageId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].Columns[AverageRate]"
+                          name="AverageRate"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyID]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[CurrencyID]"
+                          length="3"
+                          lineageId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyID]"
+                          name="CurrencyID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyDate]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[CurrencyDate]"
+                          length="50"
+                          lineageId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyDate]"
+                          name="CurrencyDate"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].Columns[EndOfDayRate]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[EndOfDayRate]"
+                          lineageId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].Columns[EndOfDayRate]"
+                          name="EndOfDayRate"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[AverageRate]"
+                          dataType="r4"
+                          name="AverageRate" />
+                        <externalMetadataColumn
+                          refId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[CurrencyID]"
+                          dataType="wstr"
+                          length="3"
+                          name="CurrencyID" />
+                        <externalMetadataColumn
+                          refId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[CurrencyDate]"
+                          dataType="wstr"
+                          length="50"
+                          name="CurrencyDate" />
+                        <externalMetadataColumn
+                          refId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].ExternalColumns[EndOfDayRate]"
+                          dataType="r4"
+                          name="EndOfDayRate" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\CSV File Locations\Data Manipulation\Merge Join"
+                  componentClassID="Microsoft.MergeJoin"
+                  contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+                  name="Merge Join"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of join to perform."
+                      name="JoinType"
+                      typeConverter="JoinType">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the number of columns in the ordering key."
+                      name="NumKeyColumns">1</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the null values are treated as equal values."
+                      name="TreatNullsAsEqual">true</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Indicates the requested maximum buffers per input before blocking."
+                      name="MaxBuffersPerInput">5</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\CSV File Locations\Data Manipulation\Merge Join.Inputs[Merge Join Left Input]"
+                      hasSideEffects="true"
+                      name="Merge Join Left Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Merge Join.Inputs[Merge Join Left Input].Columns[CurrencyID]"
+                          cachedDataType="wstr"
+                          cachedLength="3"
+                          cachedName="CurrencyID"
+                          cachedSortKeyPosition="1"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Sort.Outputs[Sort Output].Columns[CurrencyID]" />
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Merge Join.Inputs[Merge Join Left Input].Columns[AverageRate]"
+                          cachedDataType="r4"
+                          cachedName="AverageRate"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Sort.Outputs[Sort Output].Columns[AverageRate]" />
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Merge Join.Inputs[Merge Join Left Input].Columns[CurrencyDate]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="CurrencyDate"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Sort.Outputs[Sort Output].Columns[CurrencyDate]" />
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Merge Join.Inputs[Merge Join Left Input].Columns[EndOfDayRate]"
+                          cachedDataType="r4"
+                          cachedName="EndOfDayRate"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Sort.Outputs[Sort Output].Columns[EndOfDayRate]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                    <input
+                      refId="Package\CSV File Locations\Data Manipulation\Merge Join.Inputs[Merge Join Right Input]"
+                      hasSideEffects="true"
+                      name="Merge Join Right Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Merge Join.Inputs[Merge Join Right Input].Columns[CurrencyID]"
+                          cachedDataType="wstr"
+                          cachedLength="3"
+                          cachedName="CurrencyID"
+                          cachedSortKeyPosition="1"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Sort 1.Outputs[Sort Output].Columns[CurrencyID]" />
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Merge Join.Inputs[Merge Join Right Input].Columns[DateKey]"
+                          cachedDataType="i4"
+                          cachedName="DateKey"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Sort 1.Outputs[Sort Output].Columns[DateKey]" />
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Merge Join.Inputs[Merge Join Right Input].Columns[CurrencyKey]"
+                          cachedDataType="i4"
+                          cachedName="CurrencyKey"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Sort 1.Outputs[Sort Output].Columns[CurrencyKey]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output]"
+                      isSorted="true"
+                      name="Merge Join Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output].Columns[AverageRate]"
+                          dataType="r4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output].Columns[AverageRate]"
+                          name="AverageRate">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\CSV File Locations\Data Manipulation\Merge Join.Inputs[Merge Join Left Input].Columns[AverageRate]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output].Columns[CurrencyID]"
+                          dataType="wstr"
+                          length="3"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output].Columns[CurrencyID]"
+                          name="CurrencyID"
+                          sortKeyPosition="1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\CSV File Locations\Data Manipulation\Merge Join.Inputs[Merge Join Left Input].Columns[CurrencyID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output].Columns[CurrencyDate]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output].Columns[CurrencyDate]"
+                          name="CurrencyDate">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\CSV File Locations\Data Manipulation\Merge Join.Inputs[Merge Join Left Input].Columns[CurrencyDate]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output].Columns[EndOfDayRate]"
+                          dataType="r4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output].Columns[EndOfDayRate]"
+                          name="EndOfDayRate">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\CSV File Locations\Data Manipulation\Merge Join.Inputs[Merge Join Left Input].Columns[EndOfDayRate]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output].Columns[DateKey]"
+                          dataType="i4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output].Columns[DateKey]"
+                          name="DateKey">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\CSV File Locations\Data Manipulation\Merge Join.Inputs[Merge Join Right Input].Columns[DateKey]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output].Columns[CurrencyKey]"
+                          dataType="i4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output].Columns[CurrencyKey]"
+                          name="CurrencyKey">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\CSV File Locations\Data Manipulation\Merge Join.Inputs[Merge Join Right Input].Columns[CurrencyKey]}</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\CSV File Locations\Data Manipulation\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[CSVTEST]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-NK2NKON.AdventureWorksDW20121]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-NK2NKON.AdventureWorksDW20121]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AverageRate]"
+                          cachedDataType="r4"
+                          cachedName="AverageRate"
+                          externalMetadataColumnId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AverageRate]"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output].Columns[AverageRate]" />
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CurrencyID]"
+                          cachedDataType="wstr"
+                          cachedLength="3"
+                          cachedName="CurrencyID"
+                          cachedSortKeyPosition="1"
+                          externalMetadataColumnId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyID]"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output].Columns[CurrencyID]" />
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CurrencyDate]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="CurrencyDate"
+                          externalMetadataColumnId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyDate]"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output].Columns[CurrencyDate]" />
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EndOfDayRate]"
+                          cachedDataType="r4"
+                          cachedName="EndOfDayRate"
+                          externalMetadataColumnId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndOfDayRate]"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output].Columns[EndOfDayRate]" />
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                          cachedDataType="i4"
+                          cachedName="DateKey"
+                          externalMetadataColumnId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output].Columns[DateKey]" />
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CurrencyKey]"
+                          cachedDataType="i4"
+                          cachedName="CurrencyKey"
+                          externalMetadataColumnId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyKey]"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output].Columns[CurrencyKey]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AverageRate]"
+                          dataType="r4"
+                          name="AverageRate" />
+                        <externalMetadataColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyID]"
+                          dataType="wstr"
+                          length="3"
+                          name="CurrencyID" />
+                        <externalMetadataColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyDate]"
+                          dataType="wstr"
+                          length="50"
+                          name="CurrencyDate" />
+                        <externalMetadataColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndOfDayRate]"
+                          dataType="r4"
+                          name="EndOfDayRate" />
+                        <externalMetadataColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyKey]"
+                          dataType="i4"
+                          name="CurrencyKey" />
+                        <externalMetadataColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                          dataType="i4"
+                          name="DateKey" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\CSV File Locations\Data Manipulation\OLE DB Source"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="OLE DB Source"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[CSVTEST]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-NK2NKON.AdventureWorksDW20121]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-NK2NKON.AdventureWorksDW20121]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[AverageRate]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AverageRate]"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[AverageRate]"
+                          name="AverageRate"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[CurrencyID]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CurrencyID]"
+                          length="3"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[CurrencyID]"
+                          name="CurrencyID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[CurrencyDate]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CurrencyDate]"
+                          length="50"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[CurrencyDate]"
+                          name="CurrencyDate"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[EndOfDayRate]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EndOfDayRate]"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[EndOfDayRate]"
+                          name="EndOfDayRate"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[CurrencyKey]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CurrencyKey]"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[CurrencyKey]"
+                          name="CurrencyKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[DateKey]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DateKey]"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[DateKey]"
+                          name="DateKey"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AverageRate]"
+                          dataType="r4"
+                          name="AverageRate" />
+                        <externalMetadataColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CurrencyID]"
+                          dataType="wstr"
+                          length="3"
+                          name="CurrencyID" />
+                        <externalMetadataColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CurrencyDate]"
+                          dataType="wstr"
+                          length="50"
+                          name="CurrencyDate" />
+                        <externalMetadataColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EndOfDayRate]"
+                          dataType="r4"
+                          name="EndOfDayRate" />
+                        <externalMetadataColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CurrencyKey]"
+                          dataType="i4"
+                          name="CurrencyKey" />
+                        <externalMetadataColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DateKey]"
+                          dataType="i4"
+                          name="DateKey" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AverageRate]"
+                          dataType="r4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AverageRate]"
+                          name="AverageRate" />
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CurrencyID]"
+                          dataType="wstr"
+                          length="3"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CurrencyID]"
+                          name="CurrencyID" />
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CurrencyDate]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CurrencyDate]"
+                          name="CurrencyDate" />
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EndOfDayRate]"
+                          dataType="r4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EndOfDayRate]"
+                          name="EndOfDayRate" />
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CurrencyKey]"
+                          dataType="i4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CurrencyKey]"
+                          name="CurrencyKey" />
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DateKey]"
+                          dataType="i4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DateKey]"
+                          name="DateKey" />
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\CSV File Locations\Data Manipulation\Sort"
+                  componentClassID="Microsoft.Sort"
+                  contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+                  name="Sort"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                      name="EliminateDuplicates">true</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the maximum number of threads to use for sorting."
+                      expressionType="Notify"
+                      name="MaximumThreads">-1</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\CSV File Locations\Data Manipulation\Sort.Inputs[Sort Input]"
+                      name="Sort Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort.Inputs[Sort Input].Columns[AverageRate]"
+                          cachedDataType="r4"
+                          cachedName="AverageRate"
+                          lineageId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].Columns[AverageRate]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort.Inputs[Sort Input].Columns[CurrencyID]"
+                          cachedDataType="wstr"
+                          cachedLength="3"
+                          cachedName="CurrencyID"
+                          lineageId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyID]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">1</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort.Inputs[Sort Input].Columns[CurrencyDate]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="CurrencyDate"
+                          lineageId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyDate]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort.Inputs[Sort Input].Columns[EndOfDayRate]"
+                          cachedDataType="r4"
+                          cachedName="EndOfDayRate"
+                          lineageId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].Columns[EndOfDayRate]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\CSV File Locations\Data Manipulation\Sort.Outputs[Sort Output]"
+                      isSorted="true"
+                      name="Sort Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort.Outputs[Sort Output].Columns[AverageRate]"
+                          dataType="r4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Sort.Outputs[Sort Output].Columns[AverageRate]"
+                          name="AverageRate">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].Columns[AverageRate]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort.Outputs[Sort Output].Columns[CurrencyID]"
+                          dataType="wstr"
+                          length="3"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Sort.Outputs[Sort Output].Columns[CurrencyID]"
+                          name="CurrencyID"
+                          sortKeyPosition="1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort.Outputs[Sort Output].Columns[CurrencyDate]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Sort.Outputs[Sort Output].Columns[CurrencyDate]"
+                          name="CurrencyDate">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyDate]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort.Outputs[Sort Output].Columns[EndOfDayRate]"
+                          dataType="r4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Sort.Outputs[Sort Output].Columns[EndOfDayRate]"
+                          name="EndOfDayRate">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output].Columns[EndOfDayRate]}</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\CSV File Locations\Data Manipulation\Sort 1"
+                  componentClassID="Microsoft.Sort"
+                  contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+                  name="Sort 1"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                      name="EliminateDuplicates">true</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the maximum number of threads to use for sorting."
+                      expressionType="Notify"
+                      name="MaximumThreads">-1</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\CSV File Locations\Data Manipulation\Sort 1.Inputs[Sort Input]"
+                      name="Sort Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort 1.Inputs[Sort Input].Columns[AverageRate]"
+                          cachedDataType="r4"
+                          cachedName="AverageRate"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[AverageRate]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort 1.Inputs[Sort Input].Columns[CurrencyID]"
+                          cachedDataType="wstr"
+                          cachedLength="3"
+                          cachedName="CurrencyID"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[CurrencyID]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">1</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort 1.Inputs[Sort Input].Columns[CurrencyDate]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="CurrencyDate"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[CurrencyDate]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort 1.Inputs[Sort Input].Columns[EndOfDayRate]"
+                          cachedDataType="r4"
+                          cachedName="EndOfDayRate"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[EndOfDayRate]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort 1.Inputs[Sort Input].Columns[CurrencyKey]"
+                          cachedDataType="i4"
+                          cachedName="CurrencyKey"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[CurrencyKey]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort 1.Inputs[Sort Input].Columns[DateKey]"
+                          cachedDataType="i4"
+                          cachedName="DateKey"
+                          lineageId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[DateKey]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\CSV File Locations\Data Manipulation\Sort 1.Outputs[Sort Output]"
+                      isSorted="true"
+                      name="Sort Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort 1.Outputs[Sort Output].Columns[AverageRate]"
+                          dataType="r4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Sort 1.Outputs[Sort Output].Columns[AverageRate]"
+                          name="AverageRate">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[AverageRate]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort 1.Outputs[Sort Output].Columns[CurrencyID]"
+                          dataType="wstr"
+                          length="3"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Sort 1.Outputs[Sort Output].Columns[CurrencyID]"
+                          name="CurrencyID"
+                          sortKeyPosition="1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[CurrencyID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort 1.Outputs[Sort Output].Columns[CurrencyDate]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Sort 1.Outputs[Sort Output].Columns[CurrencyDate]"
+                          name="CurrencyDate">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[CurrencyDate]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort 1.Outputs[Sort Output].Columns[EndOfDayRate]"
+                          dataType="r4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Sort 1.Outputs[Sort Output].Columns[EndOfDayRate]"
+                          name="EndOfDayRate">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[EndOfDayRate]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort 1.Outputs[Sort Output].Columns[CurrencyKey]"
+                          dataType="i4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Sort 1.Outputs[Sort Output].Columns[CurrencyKey]"
+                          name="CurrencyKey">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[CurrencyKey]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\CSV File Locations\Data Manipulation\Sort 1.Outputs[Sort Output].Columns[DateKey]"
+                          dataType="i4"
+                          lineageId="Package\CSV File Locations\Data Manipulation\Sort 1.Outputs[Sort Output].Columns[DateKey]"
+                          name="DateKey">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output].Columns[DateKey]}</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\CSV File Locations\Data Manipulation.Paths[Flat File Source Output]"
+                  endId="Package\CSV File Locations\Data Manipulation\Sort.Inputs[Sort Input]"
+                  name="Flat File Source Output"
+                  startId="Package\CSV File Locations\Data Manipulation\CSV Data Source.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\CSV File Locations\Data Manipulation.Paths[Merge Join Output]"
+                  endId="Package\CSV File Locations\Data Manipulation\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Merge Join Output"
+                  startId="Package\CSV File Locations\Data Manipulation\Merge Join.Outputs[Merge Join Output]" />
+                <path
+                  refId="Package\CSV File Locations\Data Manipulation.Paths[OLE DB Source Output]"
+                  endId="Package\CSV File Locations\Data Manipulation\Sort 1.Inputs[Sort Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\CSV File Locations\Data Manipulation\OLE DB Source.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\CSV File Locations\Data Manipulation.Paths[Sort Output]"
+                  endId="Package\CSV File Locations\Data Manipulation\Merge Join.Inputs[Merge Join Left Input]"
+                  name="Sort Output"
+                  startId="Package\CSV File Locations\Data Manipulation\Sort.Outputs[Sort Output]" />
+                <path
+                  refId="Package\CSV File Locations\Data Manipulation.Paths[Sort Output1]"
+                  endId="Package\CSV File Locations\Data Manipulation\Merge Join.Inputs[Merge Join Right Input]"
+                  name="Sort Output"
+                  startId="Package\CSV File Locations\Data Manipulation\Sort 1.Outputs[Sort Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{3311720C-6674-45D7-BFD9-96B35F55A4DD}"
+          DTS:ObjectName="{3311720C-6674-45D7-BFD9-96B35F55A4DD}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::varFolderName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{0BDFD0C0-4DDE-4692-983A-E31576D027B4}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FDAE9384-F523-41F6-AB79-E132FBCEBF08}"
+          SQLTask:SqlStatementSource="DELETE FROM &quot;CSVTEST&quot;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Extract Sample Currency Data"
       DTS:CreationName="Microsoft.Pipeline"
@@ -472,6 +1732,173 @@
                       refId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Sample Currency Data\Data to Table"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Data to Table"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[CSVTEST]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Sample Currency Data\Data to Table.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-NK2NKON.AdventureWorksDW20121]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-NK2NKON.AdventureWorksDW20121]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input].Columns[AverageRate]"
+                      cachedDataType="r4"
+                      cachedName="AverageRate"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input].ExternalColumns[AverageRate]"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[AverageRate]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input].Columns[CurrencyID]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="CurrencyID"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyID]"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyID]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input].Columns[CurrencyDate]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CurrencyDate"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyDate]"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyDate]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input].Columns[EndOfDayRate]"
+                      cachedDataType="r4"
+                      cachedName="EndOfDayRate"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input].ExternalColumns[EndOfDayRate]"
+                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[EndOfDayRate]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input].Columns[CurrencyKey]"
+                      cachedDataType="i4"
+                      cachedName="CurrencyKey"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyKey]"
+                      lineageId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Match Output].Columns[CurrencyKey]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      lineageId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Match Output].Columns[DateKey]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input].ExternalColumns[AverageRate]"
+                      dataType="r4"
+                      name="AverageRate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyID]"
+                      dataType="wstr"
+                      length="3"
+                      name="CurrencyID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyDate]"
+                      dataType="wstr"
+                      length="50"
+                      name="CurrencyDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input].ExternalColumns[EndOfDayRate]"
+                      dataType="r4"
+                      name="EndOfDayRate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyKey]"
+                      dataType="i4"
+                      name="CurrencyKey" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Sample Currency Data\Data to Table.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Data to Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Sample Currency Data\Data to Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Data to Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Sample Currency Data\Data to Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1815,173 +3242,6 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Extract Sample Currency Data\OLE DB Destination"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE DB Destination"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[CSVSample]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Extract Sample Currency Data\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-NK2NKON.AdventureWorksDW20121]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-NK2NKON.AdventureWorksDW20121]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AverageRate]"
-                      cachedDataType="r4"
-                      cachedName="AverageRate"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AverageRate]"
-                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[AverageRate]" />
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CurrencyID]"
-                      cachedDataType="wstr"
-                      cachedLength="3"
-                      cachedName="CurrencyID"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyID]"
-                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyID]" />
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CurrencyDate]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="CurrencyDate"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyDate]"
-                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[CurrencyDate]" />
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EndOfDayRate]"
-                      cachedDataType="r4"
-                      cachedName="EndOfDayRate"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndOfDayRate]"
-                      lineageId="Package\Extract Sample Currency Data\CSV Data Source.Outputs[Flat File Source Output].Columns[EndOfDayRate]" />
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CurrencyKey]"
-                      cachedDataType="i4"
-                      cachedName="CurrencyKey"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyKey]"
-                      lineageId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Match Output].Columns[CurrencyKey]" />
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DateKey]"
-                      cachedDataType="i4"
-                      cachedName="DateKey"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
-                      lineageId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Match Output].Columns[DateKey]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AverageRate]"
-                      dataType="r4"
-                      name="AverageRate" />
-                    <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyID]"
-                      dataType="wstr"
-                      length="3"
-                      name="CurrencyID" />
-                    <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyDate]"
-                      dataType="wstr"
-                      length="50"
-                      name="CurrencyDate" />
-                    <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndOfDayRate]"
-                      dataType="r4"
-                      name="EndOfDayRate" />
-                    <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyKey]"
-                      dataType="i4"
-                      name="CurrencyKey" />
-                    <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
-                      dataType="i4"
-                      name="DateKey" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Extract Sample Currency Data\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Extract Sample Currency Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Extract Sample Currency Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Extract Sample Currency Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
@@ -2001,7 +3261,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
               startId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Extract Sample Currency Data.Paths[Lookup Match Output1]"
-              endId="Package\Extract Sample Currency Data\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Extract Sample Currency Data\Data to Table.Inputs[OLE DB Destination Input]"
               name="Lookup Match Output"
               startId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Match Output]" />
             <path
@@ -2013,46 +3273,25 @@ where [refTable].[FullDateAlternateKey] = ?</property>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Foreach File in Folder"
-      DTS:CreationName="STOCK:FOREACHLOOP"
-      DTS:Description="Foreach Loop Container"
-      DTS:DTSID="{62FCB02A-EA91-4198-ADBD-D47CDD266AFD}"
-      DTS:ExecutableType="STOCK:FOREACHLOOP"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Foreach File in Folder">
-      <DTS:ForEachEnumerator
-        DTS:CreationName="Microsoft.ForEachFileEnumerator"
-        DTS:DTSID="{E7E78FB1-F8CB-4739-B8B0-C5C464EEFF4F}"
-        DTS:ObjectName="{E7E78FB1-F8CB-4739-B8B0-C5C464EEFF4F}">
-        <DTS:ObjectData>
-          <ForEachFileEnumeratorProperties>
-            <FEFEProperty
-              Folder="C:\Users\bryan\OneDrive\Desktop\CSV Sample Data" />
-            <FEFEProperty
-              FileSpec="Currency_*.csv" />
-            <FEFEProperty
-              FileNameRetrievalType="0" />
-            <FEFEProperty
-              Recurse="-1" />
-          </ForEachFileEnumeratorProperties>
-        </DTS:ObjectData>
-      </DTS:ForEachEnumerator>
-      <DTS:Variables />
-      <DTS:LoggingOptions
-        DTS:FilterKind="0"
-        DTS:LoggingMode="2" />
-      <DTS:Executables />
-      <DTS:ForEachVariableMappings>
-        <DTS:ForEachVariableMapping
-          DTS:CreationName=""
-          DTS:DTSID="{1A5CFA56-547C-491A-A002-4468C75FD097}"
-          DTS:ObjectName="{1A5CFA56-547C-491A-A002-4468C75FD097}"
-          DTS:ValueIndex="0"
-          DTS:VariableName="User::varFileName" />
-      </DTS:ForEachVariableMappings>
-    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{8B194ADC-235A-4A93-BE6C-1DA447CA3CCA}"
+      DTS:From="Package\Extract Sample Currency Data"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\CSV File Locations" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{0A70E3AB-2373-4A27-94C7-F12409FFAAC8}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Extract Sample Currency Data" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -2064,18 +3303,70 @@ where [refTable].[FullDateAlternateKey] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="231.5,102.5"
-          Size="231.5,145.5"
-          Id="Package\Foreach File in Folder"
-          TopLeft="130.5,312.541665114256" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="166.5,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="194,100.208332835593" />
         <NodeLayout
           Size="220.5,42"
           Id="Package\Extract Sample Currency Data"
-          TopLeft="391.5,340.958333432881" />
+          TopLeft="172.5,203.291666583262" />
+        <NodeLayout
+          Size="163.5,42"
+          Id="Package\CSV File Locations\Data Manipulation"
+          TopLeft="31.5,15.4166666720477" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="233,112.5"
+          Size="233,155.5"
+          Id="Package\CSV File Locations"
+          TopLeft="172,295.208331867018" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="285.625,245.291666583262">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49.916665283756"
+              Start="0,0"
+              End="0,42.416665283756">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.416665283756" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="280,142.208332835593">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61.0833337476689"
+              Start="0,0"
+              End="0,53.5833337476689">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.5833337476689" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -2085,32 +3376,32 @@ where [refTable].[FullDateAlternateKey] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="163,42"
-          Id="Package\Extract Sample Currency Data\Get Error Description"
-          TopLeft="692.5,288.708331899303" />
+          Size="159.5,42"
+          Id="Package\Extract Sample Currency Data\Lookup Date Key"
+          TopLeft="474.0625,370.611109285167" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Extract Sample Currency Data\Data to Table"
+          TopLeft="483,455.5" />
         <NodeLayout
           Size="179.5,42"
           Id="Package\Extract Sample Currency Data\Lookup Currency Key"
-          TopLeft="447.5625,285.097220806129" />
+          TopLeft="464.0625,288.097220806129" />
         <NodeLayout
           Size="172,42"
           Id="Package\Extract Sample Currency Data\Flat File Destination"
-          TopLeft="692,373.208331479587" />
+          TopLeft="708.5,376.208331479587" />
         <NodeLayout
-          Size="173,42"
-          Id="Package\Extract Sample Currency Data\OLE DB Destination"
-          TopLeft="450.8125,450.124997764205" />
+          Size="177.5,42"
+          Id="Package\Extract Sample Currency Data\Get Error Description"
+          TopLeft="709,291.708331899303" />
         <NodeLayout
           Size="161.5,42"
           Id="Package\Extract Sample Currency Data\CSV Data Source"
-          TopLeft="456.5625,202.583332327091" />
-        <NodeLayout
-          Size="159.5,42"
-          Id="Package\Extract Sample Currency Data\Lookup Date Key"
-          TopLeft="457.5625,367.611109285167" />
+          TopLeft="473.0625,205.583332327091" />
         <EdgeLayout
           Id="Package\Extract Sample Currency Data.Paths[Output 0]"
-          TopLeft="776,330.708331899303">
+          TopLeft="796.125,333.708331899303">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2131,8 +3422,32 @@ where [refTable].[FullDateAlternateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Extract Sample Currency Data.Paths[Lookup Match Output1]"
+          TopLeft="553.90625,412.611109285167">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.888890714833"
+              Start="0,0"
+              End="0,35.388890714833">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.388890714833" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,11.8897578574165,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Extract Sample Currency Data.Paths[Lookup Match Output]"
-          TopLeft="537.3125,327.097220806129">
+          TopLeft="553.8125,330.097220806129">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2156,7 +3471,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Extract Sample Currency Data.Paths[Lookup Error Output]"
-          TopLeft="627.0625,307.902776352716">
+          TopLeft="643.5625,310.902776352716">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2180,7 +3495,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Extract Sample Currency Data.Paths[Flat File Source Output]"
-          TopLeft="537.3125,244.583332327091">
+          TopLeft="553.8125,247.583332327091">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2200,58 +3515,34 @@ where [refTable].[FullDateAlternateKey] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extract Sample Currency Data.Paths[Lookup Match Output1]"
-          TopLeft="537.3125,409.611109285167">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40.513888479038"
-              Start="0,0"
-              End="0,33.013888479038">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.013888479038" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,10.702256739519,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Extract Sample Currency Data\Lookup Currency Key">
+    design-time-name="Package\Extract Sample Currency Data\Lookup Date Key">
     <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimCurrency]</Value>
+          type="q2:string">[dbo].[DimDate]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q3:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q4:string">true</Value>
+      </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Extract Sample Currency Data\OLE DB Destination">
+    design-time-name="Package\Extract Sample Currency Data\Data to Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2263,26 +3554,206 @@ where [refTable].[FullDateAlternateKey] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\CSV File Locations\Data Manipulation">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="153.5,42"
+          Id="Package\CSV File Locations\Data Manipulation\OLE DB Source"
+          TopLeft="378,60.124999701356" />
+        <NodeLayout
+          Size="98.5,42"
+          Id="Package\CSV File Locations\Data Manipulation\Sort"
+          TopLeft="189,168.458332528878" />
+        <NodeLayout
+          Size="131,42"
+          Id="Package\CSV File Locations\Data Manipulation\Merge Join"
+          TopLeft="282.5,276.249998660137" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\CSV File Locations\Data Manipulation\Sort 1"
+          TopLeft="411.5,169.54166585683" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\CSV File Locations\Data Manipulation\OLE DB Destination"
+          TopLeft="262.5,390.541664726825" />
+        <NodeLayout
+          Size="161.5,42"
+          Id="Package\CSV File Locations\Data Manipulation\CSV Data Source"
+          TopLeft="137.0625,59.2499990152816" />
+        <EdgeLayout
+          Id="Package\CSV File Locations\Data Manipulation.Paths[Sort Output1]"
+          TopLeft="465,211.54166585683">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-96.5,64.7083328033073"
+              Start="0,0"
+              End="-96.5,57.2083328033073">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.3565230644039" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.3565230644039"
+                    Point2="0,38.3565230644039"
+                    Point3="-4,38.3565230644039" />
+                  <mssgle:LineSegment
+                    End="-92.5,38.3565230644039" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-92.5,38.3565230644039"
+                    Point2="-96.5,38.3565230644039"
+                    Point3="-96.5,42.3565230644039" />
+                  <mssgle:LineSegment
+                    End="-96.5,57.2083328033073" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CSV File Locations\Data Manipulation.Paths[Sort Output]"
+          TopLeft="238.25,210.458332528878">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="89.25,65.7916661312597"
+              Start="0,0"
+              End="89.25,58.2916661312597">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.9986799239594" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.9986799239594"
+                    Point2="0,38.9986799239594"
+                    Point3="4,38.9986799239594" />
+                  <mssgle:LineSegment
+                    End="85.25,38.9986799239594" />
+                  <mssgle:CubicBezierSegment
+                    Point1="85.25,38.9986799239594"
+                    Point2="89.25,38.9986799239594"
+                    Point3="89.25,42.9986799239594" />
+                  <mssgle:LineSegment
+                    End="89.25,58.2916661312597" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CSV File Locations\Data Manipulation.Paths[OLE DB Source Output]"
+          TopLeft="454.75,102.124999701356">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.25,67.416666155474"
+              Start="0,0"
+              End="10.25,59.916666155474">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.708333077737" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.708333077737"
+                    Point2="0,33.708333077737"
+                    Point3="4,33.708333077737" />
+                  <mssgle:LineSegment
+                    End="6.25,33.708333077737" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.25,33.708333077737"
+                    Point2="10.25,33.708333077737"
+                    Point3="10.25,37.708333077737" />
+                  <mssgle:LineSegment
+                    End="10.25,59.916666155474" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CSV File Locations\Data Manipulation.Paths[Merge Join Output]"
+          TopLeft="348.5,318.249998660137">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,72.2916660666878"
+              Start="0,0"
+              End="0,64.7916660666878">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,64.7916660666878" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CSV File Locations\Data Manipulation.Paths[Flat File Source Output]"
+          TopLeft="217.8125,101.249999015282">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.4375,67.208333513596"
+              Start="0,0"
+              End="20.4375,59.708333513596">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.604166756798" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.604166756798"
+                    Point2="0,33.604166756798"
+                    Point3="4,33.604166756798" />
+                  <mssgle:LineSegment
+                    End="16.4375,33.604166756798" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.4375,33.604166756798"
+                    Point2="20.4375,33.604166756798"
+                    Point3="20.4375,37.604166756798" />
+                  <mssgle:LineSegment
+                    End="20.4375,59.708333513596" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Extract Sample Currency Data\Lookup Date Key">
+    design-time-name="Package\CSV File Locations\Data Manipulation\OLE DB Destination">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimDate]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
