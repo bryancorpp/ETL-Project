@@ -72,3 +72,5 @@
 
 0,,,0,-1071607778,0,Row yielded no match during lookup.
 
+0,,0000-01-01,0,-1071607778,0,Row yielded no match during lookup.
+
